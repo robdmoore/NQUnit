@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Configuration;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Xml.Linq;
 using WatiN.Core;
 
-namespace QUnitValidation
+namespace QUnit.NUnit.JavaScript
 {
     public class QUnitTest
     {
@@ -16,13 +17,54 @@ namespace QUnitValidation
         public string Result { get; set; }
         public string Message { get; set; }
 
+        public Exception InitializationException { get; set; }
+
         public override string ToString()
         {
             return string.Format("[{0}] {1}", FileName, TestName);
         }
     }
 
-    class QUnitParser : IDisposable
+    public class QUnit
+    {
+        public static IEnumerable<QUnitTest> GetTests(params string[] filesToTest)
+        {
+            var waitHandle = new EventWaitHandle(false, EventResetMode.ManualReset);
+            var tests = default(IEnumerable<QUnitTest>);
+            var exception = default(Exception);
+
+            var t = new Thread(() =>
+            {
+                var qUnitParser = default(QUnitParser);
+                try
+                {
+                    qUnitParser = new QUnitParser();
+                    tests = filesToTest.SelectMany(qUnitParser.GetQUnitTestResults).ToArray();
+                }
+                catch (Exception ex)
+                {
+                    exception = ex;
+                }
+                finally
+                {
+                    if (qUnitParser != null)
+                        qUnitParser.Dispose();
+                    waitHandle.Set();
+                }
+
+            });
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+
+            waitHandle.WaitOne();
+
+            if (exception != null)
+                return new []{new QUnitTest {InitializationException = exception}};
+            return tests;
+        }
+    }
+
+    public class QUnitParser : IDisposable
     {
         private readonly IE _ie;
 
@@ -33,8 +75,7 @@ namespace QUnitValidation
 
         public IEnumerable<QUnitTest> GetQUnitTestResults(string testPage)
         {
-            var directory = ConfigurationManager.AppSettings["QUnitLocation"];
-            var fileName = string.IsNullOrEmpty(directory) ? testPage : Path.Combine(directory, testPage);
+            var fileName = Path.Combine(Environment.CurrentDirectory, "JavaScript", testPage);
             _ie.GoTo(fileName);
             _ie.WaitForComplete(5);
 
