@@ -29,7 +29,7 @@ namespace QUnitValidation
     {
         public static void ShouldPass(this QUnitTest theTest)
         {
-            Assert.That(theTest.Result.Split(' '), Has.Member("pass"), theTest.Message);
+            Assert.That(theTest.Result, Is.EqualTo("pass"), "Test: " + theTest.TestName + Environment.NewLine + theTest.Message);
         }
     }
 }
