@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
-using WatiN.Core;
 
 namespace QUnitValidation
 {
-
     [TestFixture]
-    
     public class JavaScriptTests
     {
         [Test, TestCaseSource("GetQUnitTests")]
@@ -23,7 +20,6 @@ namespace QUnitValidation
                 tests = n.GetTests("test.html");
             }
             return tests;
-            //yield return new QUnitTest {FileName = "asdf", Message = "asdf", Result = "pass", TestName = "adsf"};
         }
     }
 }
