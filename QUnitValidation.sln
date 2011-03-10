@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUnitValidation", "QUnitValidation\QUnitValidation.csproj", "{3E79FCC9-E410-49FF-875D-4763F18CD9BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUnit.NUnit", "QUnitValidation\QUnit.NUnit.csproj", "{3E79FCC9-E410-49FF-875D-4763F18CD9BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUnit", "QUnit\QUnit.csproj", "{B49C823C-2FBB-4EED-91B9-A312DB07F625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{3E79FCC9-E410-49FF-875D-4763F18CD9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E79FCC9-E410-49FF-875D-4763F18CD9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E79FCC9-E410-49FF-875D-4763F18CD9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49C823C-2FBB-4EED-91B9-A312DB07F625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49C823C-2FBB-4EED-91B9-A312DB07F625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49C823C-2FBB-4EED-91B9-A312DB07F625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49C823C-2FBB-4EED-91B9-A312DB07F625}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

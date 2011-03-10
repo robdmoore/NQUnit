@@ -8,7 +8,7 @@ using System.Threading;
 using System.Xml.Linq;
 using WatiN.Core;
 
-namespace QUnit.NUnit.JavaScript
+namespace QUnit
 {
     public class QUnitTest
     {
