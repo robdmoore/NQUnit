@@ -1,69 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Xml.Linq;
 using WatiN.Core;
 
 namespace QUnit
 {
-    public class QUnitTest
-    {
-        public string FileName { get; set; }
-        public string TestName { get; set; }
-        public string Result { get; set; }
-        public string Message { get; set; }
-
-        public Exception InitializationException { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("[{0}] {1}", FileName, TestName);
-        }
-    }
-
-    public class QUnit
-    {
-        public static IEnumerable<QUnitTest> GetTests(params string[] filesToTest)
-        {
-            var waitHandle = new EventWaitHandle(false, EventResetMode.ManualReset);
-            var tests = default(IEnumerable<QUnitTest>);
-            var exception = default(Exception);
-
-            var t = new Thread(() =>
-            {
-                var qUnitParser = default(QUnitParser);
-                try
-                {
-                    qUnitParser = new QUnitParser();
-                    tests = filesToTest.SelectMany(qUnitParser.GetQUnitTestResults).ToArray();
-                }
-                catch (Exception ex)
-                {
-                    exception = ex;
-                }
-                finally
-                {
-                    if (qUnitParser != null)
-                        qUnitParser.Dispose();
-                    waitHandle.Set();
-                }
-
-            });
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-
-            waitHandle.WaitOne();
-
-            if (exception != null)
-                return new []{new QUnitTest {InitializationException = exception}};
-            return tests;
-        }
-    }
-
     public class QUnitParser : IDisposable
     {
         private readonly IE _ie;
@@ -145,14 +89,6 @@ namespace QUnit
         public void Dispose()
         {
             _ie.Close();
-        }
-    }
-
-    public static class QUnitParserHelpers
-    {
-        public static bool Is(this XName xname, string name)
-        {
-            return xname.ToString().Equals(name, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
