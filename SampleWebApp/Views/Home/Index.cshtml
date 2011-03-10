@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script type="text/javascript" src="@Url.Content("~/Scripts/my-javascript.js")"></script>
+
+<h2>Index</h2>
+
+<p>Counter Display: <span id="display">0</span> <input type="button" onclick="javascript:MyNamespace.display()" value="Update" /></p>
+
+<p>
+	<input type="button" onclick="javascript:MyNamespace.increment()" value="Increment" /><br />
+	<input type="text" id="addValue" /> <input type="button" onclick="javascript:MyNamespace.add($('#addValue').val())" value="Add" /><br />
+	<input type="text" id="multiplyValue" /> <input type="button" onclick="javascript:MyNamespace.multiply($('#multiplyValue').val())" value="Multiply" /><br />
+</p>
