@@ -88,7 +88,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QUnit\NQUnit.csproj">
+    <ProjectReference Include="..\NQUnit\NQUnit.csproj">
       <Project>{B49C823C-2FBB-4EED-91B9-A312DB07F625}</Project>
       <Name>NQUnit</Name>
     </ProjectReference>

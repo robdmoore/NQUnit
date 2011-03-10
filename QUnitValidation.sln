@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQUnit.NUnit", "QUnitValidation\NQUnit.NUnit.csproj", "{3E79FCC9-E410-49FF-875D-4763F18CD9BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQUnit.NUnit", "NQUnit.NUnit\NQUnit.NUnit.csproj", "{3E79FCC9-E410-49FF-875D-4763F18CD9BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQUnit", "QUnit\NQUnit.csproj", "{B49C823C-2FBB-4EED-91B9-A312DB07F625}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQUnit", "NQUnit\NQUnit.csproj", "{B49C823C-2FBB-4EED-91B9-A312DB07F625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
