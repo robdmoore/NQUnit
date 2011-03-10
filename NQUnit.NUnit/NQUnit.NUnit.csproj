@@ -50,8 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JavaScriptTests.cs" />
-    <Compile Include="JavaScript\NUnitQUnit.cs" />
+    <Compile Include="QUnitTests.cs" />
+    <Compile Include="NUnit\NUnitQUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

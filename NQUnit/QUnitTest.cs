@@ -2,6 +2,9 @@
 
 namespace NQUnit
 {
+    /// <summary>
+    /// Encapsulates the information about a QUnit test, including the pass or fail status.
+    /// </summary>
     public class QUnitTest
     {
         public string FileName { get; set; }

@@ -1,20 +1,21 @@
 ﻿using System.Collections.Generic;
+using NQUnit.NUnit.NUnit;
 using NUnit.Framework;
 
-namespace NQUnit.NUnit.JavaScript
+namespace NQUnit.NUnit
 {
     [TestFixture]
-    public class JavaScriptTests
+    public class QUnitTests
     {
         [Test, TestCaseSource("GetQUnitTests")]
-        public void QUnitTests(QUnitTest test)
+        public void Test(QUnitTest test)
         {
             test.ShouldPass();
         }
 
         public IEnumerable<QUnitTest> GetQUnitTests()
         {
-            return NQUnit.GetTests("test.html");
+            return NQUnit.GetTests(@"JavaScript\test.html");
         }
     }
 }

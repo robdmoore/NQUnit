@@ -19,7 +19,7 @@ namespace NQUnit
 
         public IEnumerable<QUnitTest> GetQUnitTestResults(string testPage)
         {
-            var fileName = Path.Combine(Environment.CurrentDirectory, "JavaScript", testPage);
+            var fileName = Path.Combine(Environment.CurrentDirectory, testPage);
             _ie.GoTo(fileName);
             _ie.WaitForComplete(5);
 
