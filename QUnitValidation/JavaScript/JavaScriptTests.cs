@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace QUnit.NUnit.JavaScript
+namespace NQUnit.NUnit.JavaScript
 {
     [TestFixture]
     public class JavaScriptTests
@@ -14,7 +14,7 @@ namespace QUnit.NUnit.JavaScript
 
         public IEnumerable<QUnitTest> GetQUnitTests()
         {
-            return QUnit.GetTests("test.html");
+            return NQUnit.GetTests("test.html");
         }
     }
 }

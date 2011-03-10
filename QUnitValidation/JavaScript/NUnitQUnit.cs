@@ -1,9 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace QUnit.NUnit.JavaScript
+namespace NQUnit.NUnit.JavaScript
 {
-    public static class NUnitQUnitHelpers
+    public static class NUnitNQUnitHelpers
     {
         public static void ShouldPass(this QUnitTest theTest)
         {

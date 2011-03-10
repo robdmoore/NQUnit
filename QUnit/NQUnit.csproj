@@ -8,8 +8,8 @@
     <ProjectGuid>{B49C823C-2FBB-4EED-91B9-A312DB07F625}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QUnit</RootNamespace>
-    <AssemblyName>QUnit</AssemblyName>
+    <RootNamespace>NQUnit</RootNamespace>
+    <AssemblyName>NQUnit</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QUnit.cs" />
+    <Compile Include="NQUnit.cs" />
     <Compile Include="QUnitParser.cs" />
     <Compile Include="QUnitParserHelpers.cs" />
     <Compile Include="QUnitTest.cs" />

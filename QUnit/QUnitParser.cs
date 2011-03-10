@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using WatiN.Core;
 
-namespace QUnit
+namespace NQUnit
 {
     public class QUnitParser : IDisposable
     {

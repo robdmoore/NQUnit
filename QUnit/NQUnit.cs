@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace QUnit
+namespace NQUnit
 {
-    public class QUnit
+    public class NQUnit
     {
         public static IEnumerable<QUnitTest> GetTests(params string[] filesToTest)
         {

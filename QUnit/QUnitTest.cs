@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QUnit
+namespace NQUnit
 {
     public class QUnitTest
     {

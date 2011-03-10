@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Linq;
 
-namespace QUnit
+namespace NQUnit
 {
     public static class QUnitParserHelpers
     {

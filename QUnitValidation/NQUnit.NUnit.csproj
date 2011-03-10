@@ -8,8 +8,8 @@
     <ProjectGuid>{3E79FCC9-E410-49FF-875D-4763F18CD9BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QUnit.NUnit</RootNamespace>
-    <AssemblyName>QUnit.NUnit</AssemblyName>
+    <RootNamespace>NQUnit.NUnit</RootNamespace>
+    <AssemblyName>NQUnit.NUnit</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -88,9 +88,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QUnit\QUnit.csproj">
+    <ProjectReference Include="..\QUnit\NQUnit.csproj">
       <Project>{B49C823C-2FBB-4EED-91B9-A312DB07F625}</Project>
-      <Name>QUnit</Name>
+      <Name>NQUnit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
