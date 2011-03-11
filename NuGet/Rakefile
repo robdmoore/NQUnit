@@ -10,7 +10,7 @@ ASSEMBLYNAME = ENV["ASSEMBLYNAME"]||"NQUnit"
 SPEC = "..\\#{PROJECT}\\#{PROJECT}.nuspec"
 
 PACKAGES = "..\\#{PROJECT}\\packages.config"
-REPO = ENV["REPO"]||ASSEMBLYNAME
+REPO = ENV["REPO"]||PROJECT
 
 task :default => "build:build_package"
  
@@ -61,9 +61,11 @@ namespace :build do
   task :copy_output do
     TARGET = "#{REPO}\\lib\\NET40"
     puts mkdir_p TARGET
-    puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.dll", TARGET+"\\#{ASSEMBLYNAME}.dll"
-    puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.pdb", TARGET+"\\#{ASSEMBLYNAME}.pdb"
-    puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.xml", TARGET+"\\#{ASSEMBLYNAME}.xml"
+    if ASSEMBLYNAME != "none"
+      puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.dll", TARGET+"\\#{ASSEMBLYNAME}.dll"
+      puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.pdb", TARGET+"\\#{ASSEMBLYNAME}.pdb"
+      puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.xml", TARGET+"\\#{ASSEMBLYNAME}.xml"
+    end
   end
   
   desc "Tell nuget to pack this spec"
