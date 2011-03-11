@@ -2,16 +2,17 @@
 <package>
   <metadata>
     <id>
-       NQUnit.NUnit
+       NQUnit.NUnit 
     </id>
     <version>
-       1.0.0 
+       1.0.1 
     </version>
     <authors>
        Robert Moore and Miguel Madero 
     </authors>
     <description>
-       A sample project to get you up and running with NQUnit using NUnit quickly. 
+       A sample project to get you up and running with NQUnit using NUnit
+      quickly. 
     </description>
     <language>
        en-US 
@@ -23,6 +24,8 @@
        http://github.com/robdmoore/NQUnit 
     </projectUrl>
     <dependencies>
+      <dependency id='NUnit' version='2.5.9.10348'/>
+      <dependency id='NQUnit' version='1.0.0'/>
     </dependencies>
   </metadata>
 </package>
