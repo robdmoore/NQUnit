@@ -2,6 +2,8 @@ require 'rake/tasklib'
 require 'rexml/document'
 include REXML
 
+Dir.chdir File.dirname(__FILE__)
+
 CONFIGURATION = ENV["CONFIGURATION"]||"Release"
 PROJECT =ENV["PROJECT"]||"NQUnit"
 ASSEMBLYNAME = ENV["ASSEMBLYNAME"]||"NQUnit"
@@ -21,9 +23,13 @@ namespace :build do
   task :increment_version do    
     doc =  Document.new(File.new SPEC)
     version_element = doc.elements['package/metadata/version']
-    
-    build_number = ENV["BUILD_NUMBER"].dup || increment_version(version_element)
-        
+
+    if ENV["BUILD_NUMBER"] == nil
+        build_number = increment_version(version_element)
+    else
+        build_number = ENV["BUILD_NUMBER"].dup
+    end
+ 
     version_element.text = build_number
     File.open(SPEC,"w"){ |f| doc.write(f, 2) }
   end
@@ -54,14 +60,15 @@ namespace :build do
   desc "Copy output files (dlls, pdbs) to output dir"
   task :copy_output do
     TARGET = "#{REPO}\\lib\\NET40"
+    puts mkdir_p TARGET
     puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.dll", TARGET+"\\#{ASSEMBLYNAME}.dll"
     puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.pdb", TARGET+"\\#{ASSEMBLYNAME}.pdb"
+    puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.xml", TARGET+"\\#{ASSEMBLYNAME}.xml"
   end
   
   desc "Tell nuget to pack this spec"
   task :nupack do
-    #nuget pack ..\#{PROJECT}\#{PROJECT}.nuspec -o ..\Output\#{ASSEMBLYNAME}\ -BasePath ..\Output\#{ASSEMBLYNAME}
-    sh "nuget pack #{SPEC} -o #{REPO} -BasePath #{REPO}"
+    sh "nuget.exe pack #{SPEC} -BasePath #{REPO}"
   end  
 end
 
