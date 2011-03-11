@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<package>
+  <metadata>
+    <id>
+       NQUnit 
+    </id>
+    <version>
+       1.0.0 
+    </version>
+    <authors>
+       Robert Moore and Miguel Madero 
+    </authors>
+    <description>
+       Parse jQuery QUnit JavaScript tests from .NET; you can consequently present the tests and their results in your favourite test library (e.g. NUnit).
+    </description>
+    <language>
+       en-US 
+    </language>
+    <licenseUrl>
+       http://github.com/robdmoore/NQUnit/blob/master/LICENSE
+    </licenseUrl>
+    <projectUrl>
+       http://github.com/robdmoore/NQUnit
+    </projectUrl>
+    <dependencies>
+      
+    </dependencies>
+  </metadata>
+</package>
