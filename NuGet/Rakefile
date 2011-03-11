@@ -60,8 +60,8 @@ namespace :build do
   desc "Copy output files (dlls, pdbs) to output dir"
   task :copy_output do
     TARGET = "#{REPO}\\lib\\NET40"
-    puts mkdir_p TARGET
     if ASSEMBLYNAME != "none"
+      puts mkdir_p TARGET
       puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.dll", TARGET+"\\#{ASSEMBLYNAME}.dll"
       puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.pdb", TARGET+"\\#{ASSEMBLYNAME}.pdb"
       puts cp "..\\#{PROJECT}\\bin\\Release\\#{ASSEMBLYNAME}.xml", TARGET+"\\#{ASSEMBLYNAME}.xml"
