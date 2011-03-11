@@ -50,8 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QUnitTests.cs" />
-    <Compile Include="NUnit\NUnitQUnit.cs" />
+    <Compile Include="JavaScriptTests\NQUnit\QUnitTests.cs" />
+    <Compile Include="JavaScriptTests\NQUnit\NUnitQUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,31 +59,31 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JavaScript\lib\jquery-1.4.4-vsdoc.js">
+    <Content Include="JavaScriptTests\Scripts\jquery-1.4.4-vsdoc.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\lib\jquery-1.4.4.js">
+    <Content Include="JavaScriptTests\Scripts\jquery-1.4.4.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\lib\jquery.mockjax.js">
+    <Content Include="JavaScriptTests\Scripts\jquery.mockjax.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\lib\json2.js">
+    <Content Include="JavaScriptTests\Scripts\json2.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\lib\qunit.css">
+    <Content Include="JavaScriptTests\Scripts\qunit.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\lib\qunit.js">
+    <Content Include="JavaScriptTests\Scripts\qunit.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\lib\specit.js">
+    <Content Include="JavaScriptTests\Scripts\specit.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\test.html">
+    <Content Include="JavaScriptTests\test.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScript\tests.js">
+    <Content Include="JavaScriptTests\tests.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -95,7 +95,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)..\SampleWebApp\Scripts\" "$(TargetDir)JavaScript\lib"</PostBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)..\SampleWebApp\Scripts\" "$(TargetDir)JavaScriptTests\Scripts"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

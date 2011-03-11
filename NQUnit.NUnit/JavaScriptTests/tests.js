@@ -1,9 +1,9 @@
-/// <reference path="lib/jquery-1.4.4-vsdoc.js" />
-/// <reference path="lib/json2.js" />
-/// <reference path="lib/qunit.js" />
-/// <reference path="lib/specit.js" />
+/// <reference path="Scripts/jquery-1.4.4-vsdoc.js" />
+/// <reference path="Scripts/json2.js" />
+/// <reference path="Scripts/qunit.js" />
+/// <reference path="Scripts/specit.js" />
+/// <reference path="Scripts/jquery.mockjax.js" />
 /// <reference path="../../SampleWebApp/Scripts/my-javascript.js" />
-/// <reference path="lib/jquery.mockjax.js" />
 $(function () {
 
 	describe("MyNamespace.increment()", function () {

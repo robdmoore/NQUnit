@@ -19,8 +19,7 @@ namespace NQUnit
 
         public IEnumerable<QUnitTest> GetQUnitTestResults(string testPage)
         {
-            var fileName = Path.Combine(Environment.CurrentDirectory, testPage);
-            _ie.GoTo(fileName);
+            _ie.GoTo(testPage);
             _ie.WaitForComplete(5);
 
             return GrabTestResultsFromWebPage(testPage);

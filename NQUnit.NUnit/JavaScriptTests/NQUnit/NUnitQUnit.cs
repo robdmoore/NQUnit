@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace NQUnit.NUnit.NUnit
+namespace NQUnit.NUnit.JavaScriptTests.NQUnit
 {
     public static class NUnitNQUnitHelpers
     {

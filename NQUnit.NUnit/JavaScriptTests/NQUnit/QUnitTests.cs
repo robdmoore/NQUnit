@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using NQUnit.NUnit.NUnit;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using NUnit.Framework;
 
-namespace NQUnit.NUnit
+namespace NQUnit.NUnit.JavaScriptTests.NQUnit
 {
     [TestFixture]
     public class QUnitTests
@@ -15,7 +16,8 @@ namespace NQUnit.NUnit
 
         public IEnumerable<QUnitTest> GetQUnitTests()
         {
-            return NQUnit.GetTests(@"JavaScript\test.html");
+            var testsDirectory = Path.Combine(Environment.CurrentDirectory, "JavaScriptTests");
+            return global::NQUnit.NQUnit.GetTests(Directory.GetFiles(testsDirectory, "*.html"));
         }
     }
 }
