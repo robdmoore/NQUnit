@@ -5,6 +5,9 @@ using System.Threading;
 
 namespace NQUnit
 {
+    /// <summary>
+    /// Entry class for parsing and returning QUnit tests.
+    /// </summary>
     public class NQUnit
     {
         /// <summary>
