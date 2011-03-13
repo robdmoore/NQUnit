@@ -7,6 +7,17 @@ Based on [Joshua Flanagan's original work](http://www.lostechies.com/blogs/joshu
 
 There is also an extension to get the QUnit tests working in NUnit. It is easy to copy this extension and change it to work with your favourite unit testing framework.
 
+Installation
+------------
+
+ * [http://nuget.org/List/Packages/NQUnit]()
+ * [http://nuget.org/List/Packages/NQUnit.NUnit]()
+
+Documentation
+-------------
+
+[http://robdmoore.id.au/blog/2011/03/13/nqunit-javascript-testing-within-net-ci/]()
+
 Tested on
 ---------
 
@@ -19,3 +30,11 @@ Requirements
 ------------
 
 You need Internet Explorer so WatiN can fire up an instance to test the QUnit test page(s).
+
+Questions / additions / problems / etc.
+---------------------------------------
+
+ * Send me a pull request
+ * Comment on the blog post linked to in the documentation above
+ * Email me at: me (at) robdmoore (dot) id (dot) au
+ * Raise an issue in the issue tracker
