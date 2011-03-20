@@ -10,13 +10,13 @@ There is also an extension to get the QUnit tests working in NUnit. It is easy t
 Installation
 ------------
 
- * [http://nuget.org/List/Packages/NQUnit]()
- * [http://nuget.org/List/Packages/NQUnit.NUnit]()
+ * [http://nuget.org/List/Packages/NQUnit](http://nuget.org/List/Packages/NQUnit)
+ * [http://nuget.org/List/Packages/NQUnit.NUnit](http://nuget.org/List/Packages/NQUnit.NUnit)
 
 Documentation
 -------------
 
-[http://robdmoore.id.au/blog/2011/03/13/nqunit-javascript-testing-within-net-ci/]()
+[http://robdmoore.id.au/blog/2011/03/13/nqunit-javascript-testing-within-net-ci/](http://robdmoore.id.au/blog/2011/03/13/nqunit-javascript-testing-within-net-ci/)
 
 Tested on
 ---------
