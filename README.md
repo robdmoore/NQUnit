@@ -18,6 +18,14 @@ Documentation
 
 [http://robdmoore.id.au/blog/2011/03/13/nqunit-javascript-testing-within-net-ci/](http://robdmoore.id.au/blog/2011/03/13/nqunit-javascript-testing-within-net-ci/)
 
+### Asynchronous test timeouts
+
+When calling the `NQUnit.GetTests()` method there is a `maxWaitInMs` parameter, that by default is set to -1 (if you don't specify it), this parameter has the following effect:
+
+ * If -1 (or any number less than 0), then the test suite will wait forever for any asynchronous QUnit tests that you have to finish. Note: if your tests don't return then your test runner will need to be force quit.
+ * If 0, then any asynchronous QUnit tests that you have will fail since the test suite will grab the test results of the page as soon as the page finishes loading.
+ * Any other number will be the maximum time in ms after the page has finished loading that the test suite will wait for any asynchronous tests to complete.
+
 Tested on
 ---------
 
