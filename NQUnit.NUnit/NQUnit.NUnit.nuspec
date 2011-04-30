@@ -5,7 +5,7 @@
        NQUnit.NUnit 
     </id>
     <version>
-       1.0.3 
+       1.0.4 
     </version>
     <authors>
        Robert Moore and Miguel Madero 
@@ -25,7 +25,7 @@
     </projectUrl>
     <dependencies>
       <dependency id='NUnit' version='2.5.9.10348'/>
-      <dependency id='NQUnit' version='1.0.1'/>
+      <dependency id='NQUnit' version='1.0.2'/>
     </dependencies>
   </metadata>
 </package>
