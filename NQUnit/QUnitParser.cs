@@ -114,6 +114,9 @@ namespace NQUnit
             return fullTagText;
         }
 
+        /// <summary>
+        /// Closes the IE instance.
+        /// </summary>
         public void Dispose()
         {
             _ie.Close();
