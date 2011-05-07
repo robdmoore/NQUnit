@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\NQUnit.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>NQUnit.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.SHDocVw">
       <HintPath>..\packages\WatiN.2.0.50\lib\net40\Interop.SHDocVw.dll</HintPath>
@@ -55,6 +61,7 @@
     <Compile Include="QUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="NQUnit.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
