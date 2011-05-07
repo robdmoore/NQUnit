@@ -26,6 +26,11 @@ When calling the `NQUnit.GetTests()` method there is a `maxWaitInMs` parameter, 
  * If 0, then any asynchronous QUnit tests that you have will fail since the test suite will grab the test results of the page as soon as the page finishes loading.
  * Any other number will be the maximum time in ms after the page has finished loading that the test suite will wait for any asynchronous tests to complete.
 
+Compilation
+-----------
+
+In order to make the solution compile you will need to create a file NQUnit\NQUnit.snk using [sn.exe](http://msdn.microsoft.com/en-us/magazine/cc163583.aspx) or [Visual Studio](http://msdn.microsoft.com/en-us/library/ms247123.aspx) (or remove the option to strongly sign the NQUnit assembly).
+
 Tested on
 ---------
 
