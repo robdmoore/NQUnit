@@ -11,6 +11,15 @@ namespace NQUnit
     public class NQUnit
     {
         /// <summary>
+        /// Clear the browser cache before running tests to ensure you always run against the latest version of a file.
+        /// </summary>
+        public static bool ClearCacheBeforeRunningTests;
+        /// <summary>
+        /// Hide the browser window while running tests to stop it from stealing focus.
+        /// </summary>
+        public static bool HideBrowserWindow;
+
+        /// <summary>
         /// Returns an array of QUnitTest objects that encapsulate the QUnit tests within the passed in files to test.
         /// Will wait for infinity for any asynchronous tests to run.
         /// </summary>
