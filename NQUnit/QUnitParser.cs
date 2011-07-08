@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml.Linq;
 using WatiN.Core;
+using WatiN.Core.Native.Windows;
 
 namespace NQUnit
 {
@@ -25,6 +26,14 @@ namespace NQUnit
         {
             _maxWaitInMs = maxWaitInMs < 0 ? Int32.MaxValue : maxWaitInMs;
             _ie = new IE();
+            if (NQUnit.HideBrowserWindow)
+            {
+                _ie.ShowWindow(NativeMethods.WindowShowStyle.Hide);
+            }
+            if (NQUnit.ClearCacheBeforeRunningTests)
+            {
+                _ie.ClearCache();
+            }
         }
 
         /// <summary>
@@ -36,7 +45,6 @@ namespace NQUnit
         {
             _ie.GoTo(testPage);
             _ie.WaitForComplete(5);
-
             return GrabTestResultsFromWebPage(testPage);
         }
 
