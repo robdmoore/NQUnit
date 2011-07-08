@@ -26,6 +26,24 @@ When calling the `NQUnit.GetTests()` method there is a `maxWaitInMs` parameter, 
  * If 0, then any asynchronous QUnit tests that you have will fail since the test suite will grab the test results of the page as soon as the page finishes loading.
  * Any other number will be the maximum time in ms after the page has finished loading that the test suite will wait for any asynchronous tests to complete.
 
+### Configuring WatiN
+
+There are a couple of configuration options that have been exposed for WatiN, e.g.:
+
+    [TestFixtureSetUp]
+    public void SetupFixture()
+    {
+        global::NQUnit.NQUnit.HideBrowserWindow = true;
+        global::NQUnit.NQUnit.ClearCacheBeforeRunningTests = true;
+    }
+
+The two configuration options so far are:
+
+ * **HideBrowserWindow**: Set to true to stop the Internet Explorer window popping up and stealing focus away from your test runner (if you are initially running your tests then it would be advisable to not hide the window until you are sure they run correctly).
+ * **ClearCacheBeforeRunningTests**: Set to true to clear the cache in Internet Explorer before tests are run (use this if you are having trouble with caching).
+
+They are shown above in a test fixture setup because you can only set these properties once for your whole test run since they are static properties so setting them will apply to all tests.
+
 Compilation
 -----------
 
