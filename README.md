@@ -29,7 +29,9 @@ When calling the `NQUnit.GetTests()` method there is a `maxWaitInMs` parameter, 
 ### HTML Boilerplate
 
 In addition to the standard QUnit boilerplate in your HTML, you will need to include a "Mark of the Web" as follows:
+
     <!-- saved from url=(0014)about:internet -->
+    
 This instructs Internet Explorer to allow Javascript execution even though the page is opened locally.
 
 ### Configuring WatiN
