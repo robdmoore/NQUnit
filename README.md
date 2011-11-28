@@ -26,6 +26,12 @@ When calling the `NQUnit.GetTests()` method there is a `maxWaitInMs` parameter, 
  * If 0, then any asynchronous QUnit tests that you have will fail since the test suite will grab the test results of the page as soon as the page finishes loading.
  * Any other number will be the maximum time in ms after the page has finished loading that the test suite will wait for any asynchronous tests to complete.
 
+### HTML Boilerplate
+
+In addition to the standard QUnit boilerplate in your HTML, you will need to include a "Mark of the Web" as follows:
+    <!-- saved from url=(0014)about:internet -->
+This instructs Internet Explorer to allow Javascript execution even though the page is opened locally.
+
 ### Configuring WatiN
 
 There are a couple of configuration options that have been exposed for WatiN, e.g.:
