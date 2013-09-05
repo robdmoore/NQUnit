@@ -5,7 +5,7 @@
        NQUnit 
     </id>
     <version>
-       1.0.4 
+       1.0.5 
     </version>
     <authors>
        Robert Moore and Miguel Madero 
@@ -25,7 +25,7 @@
        http://github.com/robdmoore/NQUnit 
     </projectUrl>
     <dependencies>
-      <dependency id='WatiN' version='2.0.50'/>
+      <dependency id='WatiN' version='[2.0.50,)'/>
     </dependencies>
   </metadata>
 </package>
