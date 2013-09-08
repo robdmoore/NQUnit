@@ -2,30 +2,36 @@
 <package>
   <metadata>
     <id>
-       NQUnit 
+      NQUnit 
     </id>
     <version>
-       1.0.5 
+      1.0.5
     </version>
     <authors>
-       Robert Moore and Miguel Madero 
+      Robert Moore, Miguel Madero and Joshua Flanagan
     </authors>
     <description>
-       Parse jQuery QUnit JavaScript tests from .NET; you can consequently
+      Parse jQuery QUnit JavaScript tests from .NET; you can consequently
       present the tests and their results in your favourite test library (e.g.
       NUnit). 
     </description>
     <language>
-       en-US 
+      en-US 
     </language>
     <licenseUrl>
-       http://github.com/robdmoore/NQUnit/blob/master/LICENSE 
+      http://github.com/robdmoore/NQUnit/blob/master/LICENSE 
     </licenseUrl>
     <projectUrl>
-       http://github.com/robdmoore/NQUnit 
+      http://github.com/robdmoore/NQUnit 
     </projectUrl>
+    <iconUrl>
+      https://raw.github.com/robdmoore/NQUnit/master/NQUnit/NQUnit.png
+    </iconUrl>
+    <tags>
+      QUnit JavaScript testing NUnit unit-testing continuous-integration
+    </tags>
     <dependencies>
-      <dependency id='WatiN' version='[2.0.50,)'/>
+      <dependency id="WatiN" version="2.1.0" />
     </dependencies>
   </metadata>
 </package>

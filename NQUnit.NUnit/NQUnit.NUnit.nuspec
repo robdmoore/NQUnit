@@ -2,30 +2,35 @@
 <package>
   <metadata>
     <id>
-       NQUnit.NUnit 
+      NQUnit.NUnit 
     </id>
     <version>
-       1.0.4 
+      1.0.5
     </version>
     <authors>
-       Robert Moore and Miguel Madero 
+      Robert Moore, Miguel Madero and Joshua Flanagan
     </authors>
     <description>
-       A sample project to get you up and running with NQUnit using NUnit
-      quickly. 
+      A sample project to get you up and running with NQUnit using NUnit quickly. 
     </description>
     <language>
-       en-US 
+      en-US 
     </language>
     <licenseUrl>
-       http://github.com/robdmoore/NQUnit/blob/master/LICENSE 
+      http://github.com/robdmoore/NQUnit/blob/master/LICENSE 
     </licenseUrl>
     <projectUrl>
-       http://github.com/robdmoore/NQUnit 
+      http://github.com/robdmoore/NQUnit
     </projectUrl>
+    <iconUrl>
+      https://raw.github.com/robdmoore/NQUnit/master/NQUnit.NUnit/NQUnit.NUnit.png
+    </iconUrl>
+    <tags>
+      QUnit JavaScript testing NUnit unit-testing continuous-integration nunit
+    </tags>
     <dependencies>
-      <dependency id='NUnit' version='2.5.9.10348'/>
-      <dependency id='NQUnit' version='1.0.2'/>
+      <dependency id="NUnit" version="2.6.2"/>
+      <dependency id="NQUnit" version="1.0.5"/>
     </dependencies>
   </metadata>
 </package>

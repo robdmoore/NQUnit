@@ -66,6 +66,7 @@
     <Compile Include="QUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="NQUnit.nuspec" />
     <None Include="NQUnit.snk" />
     <None Include="packages.config" />
   </ItemGroup>

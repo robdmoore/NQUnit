@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="NQUnit.NUnit.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
