@@ -41,6 +41,6 @@
     <file src="JavaScriptTests\Scripts\qunit-1.12.0.js" target="content\JavaScriptTests\Scripts" />
     <file src="JavaScriptTests\Scripts\qunit-1.12.0.css" target="content\JavaScriptTests\Scripts" />
     <file src="JavaScriptTests\Scripts\jquery-1.10.2.min.js" target="content\JavaScriptTests\Scripts" />
-    <file src="readme.txt" target="content" />
+    <file src="readme.txt" target="" />
   </files>
 </package>
