@@ -33,4 +33,10 @@
       <dependency id="NQUnit" version="1.0.5"/>
     </dependencies>
   </metadata>
+  <files>
+    <file src="JavaScriptTests\NQUnit\NUnitQUnit.cs" target="content\JavaScriptTests\NQUnit" />
+    <file src="JavaScriptTests\NQUnit\QUnitTests.cs" target="content\JavaScriptTests\NQUnit" />
+    <file src="JavaScriptTests\blank.js" target="content\JavaScriptTests" />
+    <file src="JavaScriptTests\blank.html" target="content\JavaScriptTests" />
+  </files>
 </package>

@@ -3,9 +3,11 @@
 
 Runs QUnit tests inside .NET by using WatiN.
 
-Based on [Joshua Flanagan's original work](http://www.lostechies.com/blogs/joshuaflanagan/archive/2008/09/18/running-jquery-qunit-tests-under-continuous-integration.aspx), but updated to work with the latest version of WatiN (2.0.5 at the time of writing) and QUnit.
+Based on [Joshua Flanagan's original work](http://www.lostechies.com/blogs/joshuaflanagan/archive/2008/09/18/running-jquery-qunit-tests-under-continuous-integration.aspx), but updated to work with the latest version of WatiN (2.1.0 at the time of writing) and QUnit.
 
 There is also an extension to get the QUnit tests working in NUnit. It is easy to copy this extension and change it to work with your favourite unit testing framework.
+
+While this library still works there are much better solutions available now such as [Chutzpah](http://chutzpah.codeplex.com/).
 
 Installation
 ------------
@@ -44,11 +46,6 @@ The two configuration options so far are:
 
 They are shown above in a test fixture setup because you can only set these properties once for your whole test run since they are static properties so setting them will apply to all tests.
 
-Compilation
------------
-
-In order to make the solution compile you will need to create a file NQUnit\NQUnit.snk using [sn.exe](http://msdn.microsoft.com/en-us/magazine/cc163583.aspx) or [Visual Studio](http://msdn.microsoft.com/en-us/library/ms247123.aspx) (or remove the option to strongly sign the NQUnit assembly).
-
 Tested on
 ---------
 
@@ -65,7 +62,5 @@ You need Internet Explorer so WatiN can fire up an instance to test the QUnit te
 Questions / additions / problems / etc.
 ---------------------------------------
 
- * Send me a pull request
- * Comment on the blog post linked to in the documentation above
- * Email me at: me (at) robdmoore (dot) id (dot) au
+ * Send a pull request
  * Raise an issue in the issue tracker

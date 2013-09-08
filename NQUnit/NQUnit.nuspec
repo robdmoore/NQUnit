@@ -34,4 +34,9 @@
       <dependency id="WatiN" version="2.1.0" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="bin\Release\NQUnit.dll" target="lib\NET40" />
+    <file src="bin\Release\NQUnit.pdb" target="lib\NET40" />
+    <file src="bin\Release\NQUnit.XML" target="lib\NET40" />
+  </files>
 </package>
