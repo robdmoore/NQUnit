@@ -234,4 +234,3 @@
   window.after    = SpecIt.after;
   window.assert   = SpecIt.assert;
 })();
-

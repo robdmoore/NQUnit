@@ -69,22 +69,16 @@
     <Content Include="JavaScriptTests\async.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScriptTests\Scripts\jquery-1.4.4-vsdoc.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JavaScriptTests\Scripts\jquery-1.4.4.js">
+    <Content Include="JavaScriptTests\Scripts\jquery-1.10.2.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="JavaScriptTests\Scripts\jquery.mockjax.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScriptTests\Scripts\json2.js">
+    <Content Include="JavaScriptTests\Scripts\qunit-1.12.0.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="JavaScriptTests\Scripts\qunit.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JavaScriptTests\Scripts\qunit.js">
+    <Content Include="JavaScriptTests\Scripts\qunit-1.12.0.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="JavaScriptTests\Scripts\specit.js">
@@ -96,6 +90,7 @@
     <Content Include="JavaScriptTests\tests.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NQUnit\NQUnit.csproj">

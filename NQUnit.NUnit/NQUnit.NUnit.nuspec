@@ -38,5 +38,9 @@
     <file src="JavaScriptTests\NQUnit\QUnitTests.cs" target="content\JavaScriptTests\NQUnit" />
     <file src="JavaScriptTests\blank.js" target="content\JavaScriptTests" />
     <file src="JavaScriptTests\blank.html" target="content\JavaScriptTests" />
+    <file src="JavaScriptTests\Scripts\qunit-1.12.0.js" target="content\JavaScriptTests\Scripts" />
+    <file src="JavaScriptTests\Scripts\qunit-1.12.0.css" target="content\JavaScriptTests\Scripts" />
+    <file src="JavaScriptTests\Scripts\jquery-1.10.2.min.js" target="content\JavaScriptTests\Scripts" />
+    <file src="readme.txt" target="content" />
   </files>
 </package>
