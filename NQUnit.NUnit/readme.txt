@@ -11,8 +11,8 @@ Getting started
 3. Set the "Embed Interop Types" setting to false for the "Interop.SHDocVw" reference for the project otherwise you will get a "Unhandled Exception: System.IO.FileLoadException: Could not load file or assembl y 'Interop.SHDocVw...'" error
 4. Run the tests using an NUnit runner of choice
 
-Addinga new test
-================
+Adding a new test
+=================
 
 Copy/rename JavaScriptTests\blank.html and JavaScriptTests\blank.js to create tests. Add as many .html files as you like to the JavaScriptTests folder to add new tests (they will autoamtically be picked up) - just remember to set them all as "Copy if newer".
 
